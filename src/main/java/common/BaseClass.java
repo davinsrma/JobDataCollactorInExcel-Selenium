@@ -1,5 +1,6 @@
 package common;
 
+import banner.Banner;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -15,8 +16,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.Reporter;
 import org.testng.annotations.*;
-import reports.ReportListener;
-import reports.TestListener;
 import util.Utilities;
 
 import java.io.*;
@@ -43,7 +42,7 @@ public abstract class BaseClass {
         System.out.println("BeforeSuite: JobDataCollector");
     }
 
-    @BeforeTest(alwaysRun = true)
+//    @BeforeTest(alwaysRun = true)
     public void beforeTest(final ITestContext testContext) {
         System.out.println("BeforeTest: Testcase start time stamp: " + Utilities.getCurrentDateTimeStamp());
         extentConfig();
@@ -54,6 +53,8 @@ public abstract class BaseClass {
     @Parameters("browser")
     @BeforeClass
     public void beforeClass(@Optional("chrome") String browser) throws IOException {
+        Banner banner=new Banner();
+        banner.bannerReader();
         System.out.println("BeforeClass: Launching Web Browser:" + browser);
         TestBedBrowser = browser;
 
@@ -115,7 +116,7 @@ public abstract class BaseClass {
     public void tearDownTest() {
         //to write or update test information to reporter
         System.out.println("AfterTest:");
-        extent.flush();
+//        extent.flush();
     }
 
     @AfterClass(alwaysRun = true)

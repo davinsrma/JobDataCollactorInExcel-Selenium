@@ -60,6 +60,7 @@ public class GlassdoorJobFetchingTest extends BaseClass {
 //            loginPage.clickApplyNow();
             ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 
+
             driver.switchTo().window(tabs.get(1));
 
             Thread.sleep(2000);
@@ -73,6 +74,7 @@ public class GlassdoorJobFetchingTest extends BaseClass {
                 Utilities.zoomControl(driver, 50);
                 Utilities.takeScreenShot(driver,companyName+"_"+postName);
                 driver.close();
+
                 driver.switchTo().window(mainTab);
         }catch (Exception e){
             }
