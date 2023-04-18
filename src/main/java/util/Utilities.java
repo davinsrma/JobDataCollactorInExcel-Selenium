@@ -114,7 +114,9 @@ public class Utilities extends BaseClass {
 
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("davinsrmaa@gmail.com", "depksbavxmgemsbi");
+
+                        // need to add you gmail id and application pass not your real password
+                        return new PasswordAuthentication("davinsrmaa@gmail.com", "Application Password of Gmail");
                     }
 
                 });

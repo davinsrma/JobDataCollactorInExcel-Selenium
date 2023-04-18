@@ -42,7 +42,7 @@ public abstract class BaseClass {
         System.out.println("BeforeSuite: JobDataCollector");
     }
 
-//    @BeforeTest(alwaysRun = true)
+    @BeforeTest(alwaysRun = true)
     public void beforeTest(final ITestContext testContext) {
         System.out.println("BeforeTest: Testcase start time stamp: " + Utilities.getCurrentDateTimeStamp());
         extentConfig();
@@ -127,7 +127,7 @@ public abstract class BaseClass {
         }
     }
 
-//        @AfterSuite
+        @AfterSuite
     public void afterSuite(ITestContext itstCntxt){
             System.out.println("AfterSuite: Emailing Report");
 
@@ -148,7 +148,7 @@ public abstract class BaseClass {
             summary.add("\n");
             summary.add("******************************");
             summary.add("\n");
-            summary.add("NOTE: This is system generated report. plz do not reply. If any questions please let me know at \n\ndavinsrma@gmail.com or Call +91 8877993131");
+            summary.add("NOTE: This is system generated report. plz do not reply. If any questions please let me know at \n\ndavinsrma@gmail.com or Call +918877993131");
             summary.add("\n");
             Utilities.sendEmailReport(extentReportName , summary);
 

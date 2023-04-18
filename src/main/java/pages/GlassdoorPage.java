@@ -111,9 +111,9 @@ public class GlassdoorPage extends BaseClass {
         cancelButton.click();
     }
 
-
+    WebElement jobByIndex;
     public void setJobByIndex(int index){
-         WebElement jobByIndex= driver.findElement(By.xpath("//*[@id=\"MainCol\"]/div[1]/ul/li["+index+"]"));
+        jobByIndex= driver.findElement(By.xpath("//*[@id=\"MainCol\"]/div[1]/ul/li["+index+"]"));
         wait.until(ExpectedConditions.visibilityOf(jobByIndex));
         wait.until(ExpectedConditions.elementToBeClickable(jobByIndex));
 
@@ -121,6 +121,15 @@ public class GlassdoorPage extends BaseClass {
         Utilities.scrollToElement(driver, jobByIndex);
         jobByIndex.click();
     }
+    public String getJobForApply(int index){
+        jobByIndex= driver.findElement(By.xpath("//*[@id=\"MainCol\"]/div[1]/ul/li["+index+"]"));
+        wait.until(ExpectedConditions.visibilityOf(jobByIndex));
+        wait.until(ExpectedConditions.elementToBeClickable(jobByIndex));
+        String job=jobByIndex.getText();
+        return job;
+    }
+
+
 
     @FindBy(xpath = "//*[@id=\"MainCol\"]/div[2]/div/div[1]/button[7]/span")
     WebElement clickNextPage;

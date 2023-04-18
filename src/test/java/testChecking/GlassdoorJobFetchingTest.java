@@ -14,7 +14,7 @@ import java.util.Properties;
 public class GlassdoorJobFetchingTest extends BaseClass {
     GlassdoorPage loginPage;
     Properties properties=new Properties();
-    FileInputStream fis=new FileInputStream("./Data/config.properties");
+    FileInputStream fis=new FileInputStream("./Config/config.properties");
     int count=1;
 
 
@@ -43,7 +43,8 @@ public class GlassdoorJobFetchingTest extends BaseClass {
         for(int i=1;i<=30;i++){
         String mainTab=driver.getWindowHandle();
         try{
-        loginPage.setJobByIndex(i);
+                loginPage.setJobByIndex(i);
+
             }catch (Exception e){
                     System.out.println("All available job already captured");
                     i=31;
