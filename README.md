@@ -8,7 +8,7 @@ you need to pass below details in config.properties file
 2. Which job and for which location
 3. In how many pages you want to filter
 
-It will give you direct URL of the companies with snapshot of that career page.
+It will give you direct URL of the companies with snapshot of that career page in jobData.xlsx file
 
 This is a full-fledged Selenium automation framework integrated with TestNG, designed to simplify the process of building and executing automated test to collect the data.
 Modular architecture for easy test development and maintenance with Page Object Model.
