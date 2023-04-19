@@ -56,7 +56,6 @@ public class GlassdoorJobFetchingTest extends BaseClass {
 
 
 
-//            loginPage.clickApplyNow();
             ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 
 
