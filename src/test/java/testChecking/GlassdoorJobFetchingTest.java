@@ -67,7 +67,6 @@ public class GlassdoorJobFetchingTest extends BaseClass {
                 String []arr={companyName,postName,jobLocation,approxSalary,directUrl};
 
                 Excel1.writeExcel("./JobDataExcel/JobData.xlsx", "Data", arr);
-//                Excel1.writeExcel("JobDataExcel/JobData.xlsx", "URL",url );
 
                 Utilities.zoomControl(driver, 50);
                 Utilities.takeScreenShot(driver,companyName+"_"+postName);
