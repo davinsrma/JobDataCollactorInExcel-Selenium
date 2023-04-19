@@ -16,7 +16,6 @@ public class GlassdoorJobFetchingTest extends BaseClass {
     Properties properties=new Properties();
     FileInputStream fis=new FileInputStream("./Config/config.properties");
     int count=1;
-
     public GlassdoorJobFetchingTest() throws FileNotFoundException {
     }
 
