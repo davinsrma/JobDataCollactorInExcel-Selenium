@@ -19,7 +19,6 @@ public class GlassdoorJobFetchingTest extends BaseClass {
     public GlassdoorJobFetchingTest() throws FileNotFoundException {
     }
 
-
     @Test
     public void enterJobAndLocationAndClickSearch() throws IOException,  AWTException {
         properties.load(fis);
