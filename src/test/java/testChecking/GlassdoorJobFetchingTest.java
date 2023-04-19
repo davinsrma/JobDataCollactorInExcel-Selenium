@@ -54,7 +54,6 @@ public class GlassdoorJobFetchingTest extends BaseClass {
             String jobLocation=loginPage.getJobLocation();
             String approxSalary=loginPage.getApporxSalary();
 
-
             ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 
             driver.switchTo().window(tabs.get(1));
