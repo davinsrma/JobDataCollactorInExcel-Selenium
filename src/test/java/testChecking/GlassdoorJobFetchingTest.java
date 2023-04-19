@@ -55,14 +55,10 @@ public class GlassdoorJobFetchingTest extends BaseClass {
             String approxSalary=loginPage.getApporxSalary();
 
 
-
             ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
 
-
             driver.switchTo().window(tabs.get(1));
-
-            Thread.sleep(2000);
-
+            Thread.sleep(4000);
                 String directUrl=driver.getCurrentUrl();
                 String []arr={companyName,postName,jobLocation,approxSalary,directUrl};
                 Excel1.writeExcel("./JobDataExcel/JobData.xlsx", "Data", arr);
