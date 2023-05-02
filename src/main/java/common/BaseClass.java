@@ -49,7 +49,6 @@ public abstract class BaseClass {
     }
 
 
-
     @Parameters("browser")
     @BeforeClass
     public void beforeClass(@Optional("chrome") String browser) throws IOException {
